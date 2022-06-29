@@ -28,3 +28,5 @@ src/.vscode/*
 # Ignore .todos.json file
 
 .todos.json
+
+bin/*
