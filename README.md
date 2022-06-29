@@ -1,5 +1,10 @@
 # Todo App CLI
 
+## Requirements
+
+1) Go language installed
+2) make installed
+
 ## Download and Build
 
 1) Clone this repository
