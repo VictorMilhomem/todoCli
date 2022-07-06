@@ -5,11 +5,10 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	todo "github.com/VictorMilhomem/todoCli/src/entity"
 	"io"
 	"os"
 	"strings"
-
-	todo "github.com/VictorMilhomem/todoCli/src"
 )
 
 const (

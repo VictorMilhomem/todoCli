@@ -1,9 +1,10 @@
-package todo
+package entity
 
 import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/VictorMilhomem/todoCli/src/constants"
 	"io/ioutil"
 	"os"
 	"time"
@@ -12,10 +13,10 @@ import (
 )
 
 type item struct {
-	Task        string
-	Done        bool
-	CreatedAt   time.Time
-	CompletedAt time.Time
+	Task        string    `json:"task"`
+	Done        bool      `json:"done"`
+	CreatedAt   time.Time `json:"createdAt"`
+	CompletedAt time.Time `json:"completedAt"`
 }
 
 type Todos []item
@@ -103,9 +104,9 @@ func (t *Todos) Print() {
 
 	for idx, item := range *t {
 		idx++
-		task := blue(item.Task)
+		task := constants.Blue(item.Task)
 		if item.Done {
-			task = green(fmt.Sprintf("\u2705 %s", item.Task))
+			task = constants.Green(fmt.Sprintf("\u2705 %s", item.Task))
 		}
 		cells = append(cells, []*simpletable.Cell{
 			{Text: fmt.Sprintf("%d", idx)},

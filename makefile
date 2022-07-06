@@ -1,6 +1,6 @@
 run/todo:
-	@go run ./src/todo
+	@go run ./src/app
 
 build:
-	@go build -o bin/todo ./src/todo
+	@go build -o bin/todo ./src/app
 
